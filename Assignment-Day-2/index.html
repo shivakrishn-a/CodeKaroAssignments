@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment day 2</title>
+</head>
+
+<body>
+    <!-- ---------1-------- -->
+    <script>
+        // ----------assignment 1-----------
+        function checksignofNum(num1) {
+            if (num1 == 0) {
+                document.write(num1 + "is zero")
+            }
+            else if (num1 > 0) {
+                document.write(num1 + "is Positive")
+            }
+            else {
+                document.write(num1 + "is negative")
+            }
+        }
+        //checksignofNum(0)
+    </script>
+
+    <!-- -----------------2---------------- -->
+    <script>
+        function factorialNum(num) {
+            if (num <= 0) {
+                document.write("provide valid number")
+            }
+            let fact = 1;
+
+            for (let i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+            return document.write(`The Factorial of ${num} is ${fact}`);
+        }
+        // factorialNum(0)
+    </script>
+
+
+    <!-- --------------Assignment 3 ------------ -->
+    <script>
+        function biggestOfTwo(num1, num2) {
+            if (num1 > num2) {
+                return document.write(`${num1} is biggest`)
+            }
+            else {
+                return document.write(`${num2} is biggest`)
+            }
+        }
+        // biggestOfTwo(10, 56)
+    </script>
+
+
+
+    <!-- ----------Assignment 4--------------- -->
+    <script>
+        function palindromeString(str) {
+            let arr = str.split('');
+            let revArr = arr.reverse();
+            let finalStr = revArr.join('');
+
+            if (str == finalStr) {
+                document.write(str + " is a palindrome")
+            }
+            else {
+                document.write(str + " is not a palindrome")
+            }
+
+        }
+        //palindromeString("madan")
+    </script>
+
+    <!-- ------------5 ------------ -->
+    <script>
+        function printPrimesUpToN(n) {
+            if (n < 2) {
+                console.log("There are no prime numbers less than 2.");
+                return;
+            }
+            function isPrime(num) {
+                if (num < 2) {
+                    return false;
+                }
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Loop through numbers up to n and print primes
+            console.log(`Prime numbers up to ${n}:`);
+            for (let i = 2; i <= n; i++) {
+                if (isPrime(i)) {
+                    console.log(i);
+                }
+            }
+        }
+
+        // Example: Call the function to print prime numbers up to 20
+     //   printPrimesUpToN(20);
+
+    </script>
+
+    <!-- ---------------------6---------------- -->
+    <script>
+        function simpleCalculator(number1, number2, operator) {
+            switch (operator) {
+                case '+':
+                    return number1 + number2;
+                case '-':
+                    return number1 - number2;
+                case '*':
+                    return number1 * number2;
+                case '/':
+                    if (number2 !== 0) {
+                        return number1 / number2;
+                    } else {
+                        return "Cannot divide by zero!";
+                    }
+                default:
+                    return "Invalid operator";
+            }
+        }
+
+        // Example: Call the function to perform different operations
+        // const resultAddition = simpleCalculator(5, 3, '+');
+        // const resultSubtraction = simpleCalculator(5, 3, '-');
+        // const resultMultiplication = simpleCalculator(5, 3, '*');
+        // const resultDivision = simpleCalculator(5, 0, '/');
+
+        // console.log(`Addition: ${resultAddition}`);
+        // console.log(`Subtraction: ${resultSubtraction}`);
+        // console.log(`Multiplication: ${resultMultiplication}`);
+        // console.log(`Division: ${resultDivision}`);
+
+    </script>
+
+<!-- --------------------------7----------------------- -->
+ <script>
+    function countVowels(str) {
+    // Convert the string to lowercase to handle both uppercase and lowercase vowels
+    const lowerStr = str.toLowerCase();
+
+    // Use a regular expression to match vowels and count them
+    const vowelCount = (lowerStr.match(/[aeiou]/g) || []).length;
+
+    return vowelCount;
+}
+
+// Example: Call the function to count vowels in a string
+const inputString = "Hello, World!";
+const result = countVowels(inputString);
+
+console.log(`The number of vowels in "${inputString}" is: ${result}`);
+
+ </script>
+
+    <!-- ---------assignment 8 ------------- -->
+    <script>
+        function perfectNumber(num) {
+            let sum = 0;
+
+            for (let i = 0; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    sum = sum + i;
+                }
+            }
+            if (sum === num) {
+                document.write(num + " is perfect")
+            }
+            else {
+                document.write(num + " is not perfect")
+            }
+        }
+        //perfectNumber(6)
+    </script>
+
+    <!-- --------assignment 9----------- -->
+    <script>
+        function fibonacci(num) {
+            let a = 1, b = 2, c = 0;
+            document.write(a)
+            document.write(b)
+            for (let i = 1; i <= num; i++) {
+                c = a + b;
+                document.write(c + "    ");
+
+                a = b;
+                b = c;
+            }
+        }
+        //fibonacci(22)
+    </script>
+
+
+    <!-- ------------Assignment-10----------// -->
+    <script>
+        function multiplicationTable(num) {
+            for (let i = 1; i <= 10; i++) {
+                document.write(num + "*" + i + "=" + num * i)
+            }
+        }
+        //multiplicationTable(2)
+    </script>
+
+</body>
+
+</html>

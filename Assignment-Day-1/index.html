@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Day-1</title>
+</head>
+
+<body>
+    <script>
+
+
+        // ---------Assignment 1------------//
+
+        let fruits = [];
+        fruits.push("apple", "banana", "orange");
+        fruits.splice(0, 1);
+        fruits.push("grape");
+        fruits.splice(1, 1, "pear");
+        console.log(fruits);
+
+
+
+        // ---------Assignment 2------------//
+
+        let persons = {
+
+        };
+        persons.name = "John";
+        persons.age = 30;
+        persons.city = "New York";
+        delete persons.age
+        persons.job = "Engineer";
+        persons.city = "San Francisco";
+        console.log(persons);
+
+
+        // ---------Assignment 3------------//
+
+        let cars = [];
+
+        cars.push({
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        },
+        {
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        },
+        {
+            make: "Toyota",
+            model: "Camry",
+            year: 2018
+        });
+    
+        cars.splice(0, 1);
+       
+        cars.push({
+            make: "Honda",
+            model: "Civic",
+            year: 2020
+        });
+   
+        cars[1].model = "Accord";
+            
+        console.log(cars);
+
+    </script>
+</body>
+
+</html>
